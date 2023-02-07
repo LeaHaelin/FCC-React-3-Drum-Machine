@@ -1,0 +1,30 @@
+@import url(./drum.scss);
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+.App {
+  border: 1px solid red;
+  width: 100%;
+  height: 100vh;
+}
+
+.drum-box {
+  margin: 0 auto;
+  border: 1px solid greenyellow;
+  width: 375px;
+  height: 600px;
+}
+
+.sound-title {
+  border: 1px solid greenyellow;
+  font-size: 24px;
+  text-align: center;
+  padding: 20px 30px;
+  margin: 30px auto;
+  width: 300px;
+  border-radius: 10px;
+  background-color: cadetblue;
+}/*# sourceMappingURL=app.css.map */
