@@ -3,6 +3,8 @@ import { Drum } from "./components/Drum";
 import "./styles/app.css";
 
 function App() {
+
+
   return (
     <div className="App">
       <main className="drum-box" id='drum-machine'>

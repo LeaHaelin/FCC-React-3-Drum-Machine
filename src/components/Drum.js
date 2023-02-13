@@ -1,22 +1,68 @@
 import React from 'react'
+import { DrumPad } from './DrumPad';
 
 export const Drum = () => {
-  const test = () => {
-    const audio = document.getElementById("Q")
-  }
 
+  const audioClips = [
+    {
+      keyCode: 81,
+      key: 'Q',
+      id: 'Heater-1',
+      url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-1.mp3'
+    },
+    {
+      keyCode: 87,
+      key: 'W',
+      id: 'Heater-2',
+      url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-2.mp3'
+    },
+    {
+      keyCode: 69,
+      key: 'E',
+      id: 'Heater-3',
+      url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-3.mp3'
+    },
+    {
+      keyCode: 65,
+      key: 'A',
+      id: 'Heater-4',
+      url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3'
+    },
+    {
+      keyCode: 81,
+      key: 'S',
+      id: 'Clap',
+      url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3'
+    },
+    {
+      keyCode: 68,
+      key: 'D',
+      id: 'Open-HH',
+      url: 'https://s3.amazonaws.com/freecodecamp/drums/Dsc_Oh.mp3'
+    },
+    {
+      keyCode: 90,
+      key: 'Z',
+      id: 'Kick-n-Hat',
+      url: 'https://s3.amazonaws.com/freecodecamp/drums/Kick_n_Hat.mp3'
+    },
+    {
+      keyCode: 88,
+      key: 'X',
+      id: 'Kick',
+      url: 'https://s3.amazonaws.com/freecodecamp/drums/RP4_KICK_1.mp3'
+    },
+    {
+      keyCode: 67,
+      key: 'C',
+      id: 'Closed-HH',
+      url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
+    }
+  ]
 
   return (
     <div className='drum' id='display'>
-      <button className='drum-pad' id='q' onClick={test}><audio className='clip' id='Q' src="../audiofiles/Heater-1.mp3"></audio>Q</button>
-      <button className='drum-pad' id='w'><audio className='clip' id='W' src=""></audio>W</button>
-      <button className='drum-pad' id='e'><audio className='clip' id='E' src=""></audio>E</button>
-      <button className='drum-pad' id='a'><audio className='clip' id='A' src=""></audio>A</button>
-      <button className='drum-pad' id='s'><audio className='clip' id='S' src=""></audio>S</button>
-      <button className='drum-pad' id='d'><audio className='clip' id='D' src=""></audio>D</button>
-      <button className='drum-pad' id='z'><audio className='clip' id='Z' src=""></audio>Z</button>
-      <button className='drum-pad' id='x'><audio className='clip' id='X' src=""></audio>X</button>
-      <button className='drum-pad' id='c'><audio className='clip' id='C' src=""></audio>C</button>
+      {audioClips.map(audio => <DrumPad audio={audio} keyCode={audioClips.keyCode} key={audioClips.key} />)}
     </div>
   )
 }
