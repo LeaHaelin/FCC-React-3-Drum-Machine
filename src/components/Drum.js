@@ -62,7 +62,7 @@ export const Drum = () => {
 
   return (
     <div className='drum' id='display'>
-      {audioClips.map(audio => <DrumPad audio={audio} keyCode={audioClips.keyCode} key={audioClips.key} />)}
+      {audioClips.map(audio => <DrumPad audio={audio} />)}
     </div>
   )
 }

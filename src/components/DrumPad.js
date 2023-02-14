@@ -1,14 +1,16 @@
-import React, { useEffect } from 'react'
+
 
 export const DrumPad = ({ audio }) => {
-    const play = (key) => {
-        const sound = document.getElementById(key);
-        sound.currentTime = 0;
-        sound.play()
+
+    const playHandler = () => {
+        const audioTag = document.getElementById(audio.key);
+        audioTag.currentTime = 0;
+        audioTag.play();
     }
+
     return (
         <div>
-            <button className='drum-pad' id={audio.key} onClick={() => play(audio.key)} ><audio className='clip' id={audio.key} src={audio.url}></audio>{audio.key}</button>
+            <button id={"pad-" + audio.key} className="drum-pad" onClick={() => playHandler()}><audio id={audio.key} className="clip" src={audio.url}></audio>{audio.key}</button>
         </div >
     )
 }
