@@ -29,7 +29,7 @@ export const Drum = () => {
       url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-4_1.mp3'
     },
     {
-      keyCode: 81,
+      keyCode: 83,
       key: 'S',
       id: 'Clap',
       url: 'https://s3.amazonaws.com/freecodecamp/drums/Heater-6.mp3'
