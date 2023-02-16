@@ -1,8 +1,7 @@
-import React from 'react'
+import { useState } from 'react'
 import { DrumPad } from './DrumPad';
 
-export const Drum = () => {
-
+export const Drum = ({ volume }) => {
   const audioClips = [
     {
       keyCode: 81,
@@ -59,10 +58,12 @@ export const Drum = () => {
       url: 'https://s3.amazonaws.com/freecodecamp/drums/Cev_H2.mp3'
     }
   ]
+  const [soundTitle, setSoundTitle] = useState("Drum Sound");
 
   return (
     <div className='drum' id='display'>
-      {audioClips.map(audio => <DrumPad audio={audio} />)}
+      <h4 className="sound-title">{soundTitle}</h4>
+      {audioClips.map(audio => <DrumPad audio={audio} setSoundTitle={setSoundTitle} volume={volume} />)}
     </div>
   )
 }

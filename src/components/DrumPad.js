@@ -1,24 +1,28 @@
 import { useEffect } from "react";
 
-export const DrumPad = ({ audio }) => {
+export const DrumPad = ({ audio, setSoundTitle, volume }) => {
     useEffect(() => {
         document.addEventListener("keydown", keyPressHandler);
         return () => {
-            document.removeEventListener("keydown", keyPressHandler)
+            document.removeEventListener("keydown", keyPressHandler);
         }
-    }, [])
+    })
+
     const keyPressHandler = (e) => {
         if (e.keyCode === audio.keyCode) {
-            const audioSound = document.getElementById(audio.key);
-            audioSound.currentTime = 0;
-            audioSound.play(e);
+            const audioTag = document.getElementById(audio.key);
+            audioTag.currentTime = 0;
+            audioTag.play(e);
+            setSoundTitle(audio.id);
         }
     }
 
     const playHandler = () => {
         const audioTag = document.getElementById(audio.key);
         audioTag.currentTime = 0;
+        audioTag.volume = volume;
         audioTag.play();
+        setSoundTitle(audio.id);
     }
 
     return (
