@@ -13,10 +13,10 @@ export const DrumPad = ({ audio, setSoundTitle, volume }) => {
             const audioTag = document.getElementById(audio.key);
             audioTag.currentTime = 0;
             audioTag.play(e);
+            audioTag.volume = volume;
             setSoundTitle(audio.id);
         }
     }
-
     const playHandler = () => {
         const audioTag = document.getElementById(audio.key);
         audioTag.currentTime = 0;
@@ -27,7 +27,7 @@ export const DrumPad = ({ audio, setSoundTitle, volume }) => {
 
     return (
         <div>
-            <button id={"pad-" + audio.key} className="drum-pad" onClick={() => playHandler()} onKeyDown={() => keyPressHandler()}><audio id={audio.key} className="clip" src={audio.url}></audio>{audio.key}</button>
+            <button id={"pad-" + audio.key} className="drum-pad" onClick={() => playHandler()} ><audio id={audio.key} className="clip" src={audio.url}></audio>{audio.key}</button>
         </div >
     )
 }

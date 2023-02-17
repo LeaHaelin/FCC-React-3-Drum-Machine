@@ -9,6 +9,16 @@
   height: 500px;
 }
 
+.sound-title {
+  margin: 30px auto;
+  padding: 20px 30px;
+  border: 1px solid greenyellow;
+  width: 300px;
+  border-radius: 10px;
+  font-size: 24px;
+  background-color: cadetblue;
+}
+
 .drum-pad {
   width: 90px;
   height: 90px;

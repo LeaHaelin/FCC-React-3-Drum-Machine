@@ -1,33 +1,48 @@
 * {
-    padding: 0;
     margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 .App {
-    border: 1px solid red;
+    margin: 0;
+    padding: 40px;
     width: 100%;
     height: 100vh;
+    background-color: #060047;
 }
 
 .drum-box {
-    margin: 0 auto;
-    border: 1px solid greenyellow;
+    margin: 40px auto;
     width: 375px;
     height: 600px;
-
-}
-
-.sound-title {
-    border: 1px solid greenyellow;
-    font-size: 24px;
     text-align: center;
-    padding: 20px 30px;
-    margin: 30px auto;
-    width: 300px;
-    border-radius: 10px;
-    background-color: cadetblue;
+    font-family: 'Fredoka One', cursive;
 }
 
+.drum-box__title {
+    color: #F9F9F9;
+}
 
-@import url(./drum.scss);
+.volume-control {
+    display: flex;
+    justify-content: center;
+
+}
+
+.volum-control__icon {
+    width: 25px;
+    padding: 2px;
+    border: 1px solid blue;
+    background-color: #C689C6;
+    border-radius: 50px;
+}
+
+.volume-control__bar {
+    margin: 0 10px;
+    width: 200px;
+}
+
+@import url(./_drum.scss);
+@import url(./_drum-pad.scss);
+@import url('https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap');

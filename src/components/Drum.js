@@ -62,8 +62,10 @@ export const Drum = ({ volume }) => {
 
   return (
     <div className='drum' id='display'>
-      <h4 className="sound-title">{soundTitle}</h4>
-      {audioClips.map(audio => <DrumPad audio={audio} setSoundTitle={setSoundTitle} volume={volume} />)}
+      <h2 className="drum__sound-title">{soundTitle}</h2>
+      <div className="drum__drum-pads">
+        {audioClips.map(audio => <DrumPad audio={audio} setSoundTitle={setSoundTitle} volume={volume} />)}
+      </div>
     </div>
   )
 }
